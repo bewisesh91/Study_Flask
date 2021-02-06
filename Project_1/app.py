@@ -12,4 +12,3 @@ db = client.DB_WetimeTF
 @app.route('/')
 def wetimeTest():
     return render_template('index.html')
-

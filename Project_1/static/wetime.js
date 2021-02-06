@@ -28,14 +28,10 @@ function next() {
 
         $('.question').hide();
         $('.result').show();
-        $('#type_img').attr('src','{{ url_for(\'static\', filename=\'/img/' + result[PAI_type]['img'] + ') }}')
+        $('#type_img').attr('src', result[PAI_type]['img'])
 
-        $('#type_img').attr('src','img/' + result[PAI_type]['img'])
-        // $('#type_title').html(result[PAI_type]['title'])
-        // $('#type_explain').html(result[PAI_type]['explain'])
-
-        $('#type_other1').attr('src','img/' + result[type_other1]['img'])
-        $('#type_other2').attr('src','img/' + result[type_other2]['img'])
+        $('#type_other1').attr('src', result[type_other1]['img'])
+        $('#type_other2').attr('src', result[type_other2]['img'])
 
 
     } else {
@@ -52,7 +48,7 @@ function next() {
 // id="Yes"를 클릭 했을 때, 함수를 실행
 // 해당 함수는 id="type"의 value를 가져오고, 그 value를 type이라는 변수에 저장
 // 변수 type에 해당하는 태그의 value를 가져와서, preValue라는 변수에 저장
-// 변수 type에 해당하는 태그의 value를 prevValue에 1을 더한 값으로 변환 
+// 변수 type에 해당하는 태그의 value를 prevValue에 1을 더한 값으로 변환
 $("#Yes").click(function(){
     var type = $('#type').val();
     var preValue = $('#'+type).val();
@@ -85,9 +81,9 @@ var questions = {
 
 // 결과 리스트
 var result = {
-    "I": {"title": "해시계를 기깔나게 표현하는 문구", "explain": "나는야 해시계", "img": "result1.jpg"},
-    "M": {"title": "명품시계를 기깔나게 표현하는 문구 ", "explain": "나는야 배꼽시계", "img": "result2.jpg"},
-    "A": {"title": "올림픽시계를 기깔나게 표현하는 문구", "explain": "나는야 올림픽시계", "img": "result3.jpg"},
+    "I": {"title": "해시계를 기깔나게 표현하는 문구", "explain": "나는야 해시계", "img": "https://wetimeresult1.netlify.app/result1.jpg"},
+    "M": {"title": "명품시계를 기깔나게 표현하는 문구 ", "explain": "나는야 배꼽시계", "img": "https://wetimeresult2.netlify.app/result2.jpg"},
+    "A": {"title": "올림픽시계를 기깔나게 표현하는 문구", "explain": "나는야 올림픽시계", "img": "https://wetimeresult3.netlify.app/result3.jpg"},
 } 
 
 function others() {
