@@ -28,6 +28,7 @@ function next() {
 
         $('.question').hide();
         $('.result').show();
+
         $('#type_img').attr('src', result[PAI_type]['img'])
 
         $('#type_other1').attr('src', result[type_other1]['img'])
