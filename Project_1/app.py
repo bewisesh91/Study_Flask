@@ -11,7 +11,7 @@ db = client.DB_WetimeTF
 ### 시작 페이지 ###
 @app.route('/')
 def wetimeTest():
-    return render_template('index.html')
+    return render_template('login.html')
 
 
 if __name__ == '__main__':

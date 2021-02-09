@@ -11,7 +11,7 @@ db = client.dbhomework
 ## HTML 화면 보여주기
 @app.route('/')
 def homework():
-    return render_template('index.html')
+    return render_template('login.html')
 
 
 # 수강 신청하기(POST) API
