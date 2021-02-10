@@ -37,23 +37,23 @@
             <p> 개인적으로 개발 공부를 진행하면서 배운 것들을 차근차근 기록하는 공간입니다. </p>
             <hr class="my-4">
             <p class="lead">
-                <a onclick="hey()" class="btn btn-primary btn-lg" href="#" role="button"> 기록하기 </a>
+                <a onclick="openClose()" class="main-btn btn btn-primary btn-lg" id="main-btn" href="#" role="button"> 기록하기 </a>
             </p>
         </div>
 
-        <div class="main-posting">
+        <div class="main-posting" id="main-posting-box">
             <div class="form-group">
-                <label for="exampleInputUrl"> URL </label>
-                <input type="url" class="form-control" id="exampleInputUrl" placeholder="Type URL">
+                <label for="main-posting-url"> URL </label>
+                <input type="url" class="form-control" id="main-posting-url" placeholder="Type URL">
             </div>
             <div class="form-group">
                 <label for="exampleFormControlTextarea1"> Comment </label>
                 <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" placeholder="Type Comment"></textarea>
             </div>
-            <button type="submit" class="btn btn-primary"> 기록하기 </button>
+            <button type="submit" class="btn btn-primary"> 기록 </button>
         </div>
 
-        <div class="main-card card-columns">
+        <div class="main-card card-columns" id="main-card-columns" >
             <div class="card">
                 <img class="card-img-top"
                      src="https://image.theminda.com/data/tg/image/tour/middle/201905/c8aee858ed6e8c34010fe3c4ae9be8a5.jpg"
