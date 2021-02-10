@@ -1,0 +1,26 @@
+/* main 영역 */
+
+* {
+    font-family: 'Jua', sans-serif;
+}
+
+.main {
+    width: 900px;
+    margin: auto;
+}
+
+.main-posting {
+    width: 500px;
+    margin: auto auto 30px auto;
+    padding: 20px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+}
+
+.main-detail-hashtag {
+    font-weight: bold;
+    color: blue;
+}
+
+.main-card {
+}
