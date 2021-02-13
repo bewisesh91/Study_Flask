@@ -1,6 +1,12 @@
 import requests
 from bs4 import BeautifulSoup
 
+from pymongo import MongoClient
+
+# local에서 DB를 만드는 과정이다.
+client = MongoClient('localhost', 27017)
+db = client.dbpractice
+
 # 스크래핑 방지를 우회하기 위한 방법이다.
 headers = {'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)AppleWebKit/537.36 (KHTML, like Gecko) Chrome/73.0.3683.86 Safari/537.36'}
 
@@ -70,3 +76,19 @@ for movie in movies :
         score = movie.select_one('td.point').text
         print(rank, title, score)
 
+
+# 영화 정보를 DB에 저장하기
+# movies = soup.select('#old_content > table > tbody > tr')
+# for movie in movies:
+#     title = movie.select_one('td.title > div > a')
+#     if title is not None:
+#         rank = movie.select_one('td:nth-child(1) > img')['alt']
+#         title = movie.select_one('td.title > div > a').text
+#         score = movie.select_one('td.point').text
+#         doc = {'rank':rank,
+#                'title':title,
+#                'score':score
+#                }
+#         db.movies.insert_one(doc)
+
+# 중요한 것은, DB에 저장되는 데이터의 타입이다. 정확하게 입력하지 않으면 오류가 발생할 수 있다.
