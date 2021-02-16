@@ -29,14 +29,14 @@ def like_star():
     new_like = current_like + 1
     db.mystar.update_one({'name':name_receive}, {'$set' : {'like' : new_like}})
 
-    return jsonify({'msg': '좋아요 완료!'})
+    return jsonify({'msg': '좋아요 완료!!!'})
 
 
 @app.route('/api/delete', methods=['POST'])
 def delete_star():
     name_receive = request.form['name_give']
     target = db.mystar.delete_one({'name': name_receive})
-    return jsonify({'msg': '삭제 완료!'})
+    return jsonify({'msg': '삭제 완료!!!'})
 
 
 if __name__ == '__main__':
