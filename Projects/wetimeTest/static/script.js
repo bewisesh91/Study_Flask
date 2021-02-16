@@ -106,8 +106,8 @@ function sendLink() { // 카카오톡 공유하기
         objectType: 'text',
         text: '시간 관점 테스트',
         link: {
-            mobileWebUrl: 'https://kakao-pai-test.netlify.app',
-            webUrl: 'https://kakao-pai-test.netlify.app',
+            mobileWebUrl: 'https://http://kakaotimetest.com',
+            webUrl: 'https://http://kakaotimetest.com',
         },
     })
 }
@@ -116,13 +116,11 @@ function sendLink() { // 카카오톡 공유하기
 //     Kakao.Link.sendDefault({
 //         objectType: 'feed',
 //         content: {
-//             title: '시간 관점 테스트',
-//             description: '나를 시계로 표현한다면!?',
-//             imageUrl:
-//                 'https://t1.kakaocdn.net/friends/prod/product/20200714160917279_8809721502280_BW_00.jpg',
+//             title: 'Kakao Time Test',
+//             description: '시계 유형으로 살펴보는 시간 관점 테스트',
 //             link: {
-//                 mobileWebUrl: 'https://kakao-pai-test.netlify.app',
-//                 webUrl: 'https://kakao-pai-test.netlify.app',
+//                 mobileWebUrl: 'https://http://kakaotimetest.com',
+//                 webUrl: 'https://http://kakaotimetest.com',
 //             },
 //         },
 //     });
