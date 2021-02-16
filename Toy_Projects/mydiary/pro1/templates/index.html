@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <style>
+        * {
+            font-family: 'Nanum Gothic', sans-serif;
+        }
+        .wrap {
+            width: 1000px;
+            margin: auto;
+        }
+        .container {
+            padding: 50px;
+        }
+        .posting-box {
+            width: 500px;
+            margin: 20px 0 0 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h1> 나의 다이어리 </h1>
+                <div class="posting-box">
+                    <div class="form-group">
+                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="사진 제목">
+                    </div>
+                    <div class="form-group">
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+                                      placeholder="내용 입력"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-primary">저장하기</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-columns">
+            <div class="card">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title"> 서울대학교 </h5>
+                    <p class="card-text"> 운동하러 가기 참 좋다. </p>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title"> 서울대학교 </h5>
+                    <p class="card-text"> 운동하러 가기 참 좋다. </p>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title"> 서울대학교 </h5>
+                    <p class="card-text"> 운동하러 가기 참 좋다. </p>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title"> 서울대학교 </h5>
+                    <p class="card-text"> 운동하러 가기 참 좋다. </p>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title"> 서울대학교 </h5>
+                    <p class="card-text"> 운동하러 가기 참 좋다. </p>
+                </div>
+            </div>
+            <div class="card">
+                <!-- <img class="card-img-top" src="..." alt="Card image cap"> -->
+                <div class="card-body">
+                    <h5 class="card-title"> 서울대학교 </h5>
+                    <p class="card-text"> 운동하러 가기 참 좋다. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
