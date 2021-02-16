@@ -1,0 +1,134 @@
+body{
+    font-family: 'Yeon Sung', cursive;
+    background-color : white;
+}
+
+article{
+    display: flex;
+    /* flex를 주면, 가로로 정렬이 된다. 따라서, 세로로 정렬하려면 flex-direction을 바꾸어준다 */
+    flex-direction: column;
+}
+
+.start-title1{
+    margin-top: 20px;
+    font-size: 35px;
+}
+
+.start-title2{
+    font-size: 55px;
+}
+
+.start-image {
+    display: block;
+    margin: auto auto 0 auto;
+    width: 500px;
+    height: 300px;
+}
+
+.start-text1{
+    margin: 15px;
+    font-size: 20px;
+    line-height: 35px;
+    font-family: "Nanum Gothic" ;
+}
+
+.start-text2{
+    font-weight:bold;
+    font-size: 25px;
+    line-height: normal;
+    font-family: "Nanum Gothic" ;
+}
+
+.btn-start{
+    width: 350px;
+    margin: 15px auto 0 auto;
+    font-weight: 150;
+    font-size: 25px;
+}
+
+.start-image2 {
+    display: block;
+    margin: 30px auto;
+}
+
+.count{
+    font-size: x-large;
+    text-align: right;
+    margin-right: 10px;
+}
+
+.content{
+    line-height: normal;
+    margin-bottom: 45px;
+}
+
+.question-text {
+    font-size: 50px;
+}
+
+.btn-answer{
+    width: 350px;
+    margin: 0 auto;
+    font-size: 20px;
+}
+
+.type_image{
+    /*width: 500px;*/
+    /*height: 500px;*/
+    width: 100%;
+    margin: auto;
+    padding: 0px 30px 0px 30px;
+}
+
+.type_title{
+    font-weight:bolder;
+}
+
+.type_explain{
+    line-height: normal;
+}
+
+.question{
+    display: none;
+}
+
+.result{
+    display: none;
+    background-color: whitesmoke;
+    margin: auto;
+    width: 800px;
+
+}
+
+.type-others{
+    margin: 30px auto;
+}
+
+.btn-type-other {
+    display: block;
+    margin: auto 0 auto auto;
+    font-size: 20px;
+    color: black;
+}
+
+.btn-type-other2 {
+    display: block;
+    margin: auto auto auto 0;
+    font-size: 20px;
+    color: black;
+}
+
+.type_others {
+    display: none;
+    margin: auto;
+}
+
+.share {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+
+.share-text{
+    color: goldenrod;
+}
