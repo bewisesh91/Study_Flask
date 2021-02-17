@@ -39,6 +39,35 @@
             margin: 20px 0 0 0;
         }
     </style>
+    <script>
+        $(document).ready(function () {
+            listing()
+        })
+
+        function listing() {
+            $.ajax({
+                type: "GET",
+                url: "/diary",
+                data: {},
+                success: function (response) {
+                    alert(response['msg'])
+                }
+            })
+        }
+        function posting() {
+            let title = $('#title').val()
+            let content = $('#content').val()
+            $.ajax({
+                type: "POST",
+                url: "/diary",
+                data: {title_give: title, content_give:content},
+                success: function (response) {
+                    alert(response['msg'])
+                    window.location.reload()
+                }
+            })
+        }
+    </script>
 </head>
 
 <body>
@@ -48,13 +77,12 @@
                 <h1> 나의 다이어리 </h1>
                 <div class="posting-box">
                     <div class="form-group">
-                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="사진 제목">
+                        <input type="email" class="form-control" id="title" placeholder="사진 제목">
                     </div>
                     <div class="form-group">
-                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
-                                      placeholder="내용 입력"></textarea>
+                            <textarea class="form-control" id="content" rows="3" placeholder="내용 입력"></textarea>
                     </div>
-                    <button type="button" class="btn btn-primary">저장하기</button>
+                    <button onclick="posting()" type="button" class="btn btn-primary">저장하기</button>
                 </div>
             </div>
         </div>

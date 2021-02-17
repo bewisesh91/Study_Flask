@@ -1,3 +1,17 @@
+* {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+.wrap {
+    width: 1000px;
+    margin: auto;
+}
+
+.container {
+    padding: 50px;
+}
+
 .posting-box {
     width: 500px;
+    margin: 20px 0 0 0;
 }
