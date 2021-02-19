@@ -29,12 +29,12 @@ def save_diary():
     filename = f'file-{mytime}'
     extension = file.filename.split('.')[-1]
 
-    save_to = f'desktop/{filename}.{extension}'
+    save_to = f'static/{filename}.{extension}'
     file.save(save_to)
 
     doc = {'title': title_receive,
            'content': content_receive,
-           'file': f'{filename}.{extension}'
+           'file': f'{filename}.{extension}',
            }
     db.diary.insert_one(doc)
 
