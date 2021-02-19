@@ -1,5 +1,6 @@
 from flask import Flask, render_template, jsonify, request
 from pymongo import MongoClient
+from datetime import datetime
 
 app = Flask(__name__)
 client = MongoClient('localhost', 27017)
@@ -21,8 +22,19 @@ def show_diary():
 def save_diary():
     title_receive = request.form['title_give']
     content_receive = request.form['content_give']
-    doc = {'title' : title_receive,
-           'content' : content_receive
+
+    file = request.files["file_give"]
+    today = datetime.now()
+    mytime = today.strftime('%Y-%m-%d-%H-%M-%S')
+    filename = f'file-{mytime}'
+    extension = file.filename.split('.')[-1]
+
+    save_to = f'desktop/{filename}.{extension}'
+    file.save(save_to)
+
+    doc = {'title': title_receive,
+           'content': content_receive,
+           'file': f'{filename}.{extension}'
            }
     db.diary.insert_one(doc)
 
