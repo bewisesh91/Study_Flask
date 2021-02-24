@@ -9,42 +9,11 @@ client = MongoClient('52.79.227.172', 27017, username="test", password="test")
 db = client.mydict
 
 
-@app.route('/')
+@app.route('/', methods=['GET'])
 def main():
-    # DB에서 저장된 단어 찾아서 HTML에 나타내기
-    words = list(db.words.find({},{'_id':False}))
-    return render_template("index.html", words=words)
-
-
-@app.route('/detail/<keyword>')
-def detail(keyword):
-    status_receive = request.args.get("status_give")
-    # API에서 단어 뜻 찾아서 결과 보내기
-    r = requests.get(f"https://owlbot.info/api/v4/dictionary/{keyword}", headers={"Authorization": "Token 03aaf49135489d637d083b3c2275c272e9d10f81"})
-    result = r.json()
-    print(result)
-    return render_template("detail.html", word=keyword, result=result, status=status_receive)
-
-
-@app.route('/api/save_word', methods=['POST'])
-def save_word():
-    # 단어 저장하기
-    word_receive = request.form["word_give"]
-    definition_receive = request.form["definition_give"]
-    doc = {
-        "word" : word_receive,
-        "definition" : definition_receive
-    }
-    db.words.insert_one(doc)
-    return jsonify({'result': 'success', 'msg': f'단어 {word_receive} 저장!'})
-
-
-@app.route('/api/delete_word', methods=['POST'])
-def delete_word():
-    # 단어 삭제하기
-    word_receive = request.form["word_give"]
-    db.words.delete_one({"word":word_receive})
-    return jsonify({'result': 'success', 'msg': f'단어 {word_receive} 삭제!'})
+    words = list(db.words.find({}, {'_id': False}))
+    print(words)
+    return render_template('index.html', words=words)
 
 
 if __name__ == '__main__':

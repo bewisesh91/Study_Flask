@@ -15,5 +15,12 @@ def home():
     return render_template('index.html')
 
 
+########### 추가 한 부분 ###########
+@app.route('/result')
+def result():
+    return render_template('result.html')
+########### 추가 한 부분 ###########
+
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port=5000, debug=True)
