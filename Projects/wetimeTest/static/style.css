@@ -93,6 +93,7 @@ article{
 }
 
 .result{
+    display: none;
     background-color: whitesmoke;
     margin: auto;
     width: 800px;

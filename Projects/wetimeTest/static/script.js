@@ -40,6 +40,7 @@ function next() {
         $('#type_other2').attr('src',result[type_other2]['img'])
 
 
+
     } else {
         $('#contents').html(questions[q_num]['contents']);
         $('#type').val(questions[q_num]['type']);
