@@ -28,9 +28,6 @@ function next() {
 
         $('.question').hide();
         $('.result').show();
-        // ##### 추가한 사항 #####
-        window.location.href = "/result"
-        // ##### 추가한 사항 #####
 
         $('#type_img').attr('src',result[PAI_type]['img'])
         // $('#type_title').html(result[PAI_type]['title'])
