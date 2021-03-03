@@ -3,7 +3,7 @@ from selenium import webdriver
 from time import sleep
 
 
-driver = webdriver.Chrome('./chromedriver')
+driver = webdriver.Chrome('../chromedriver')
 
 url = "https://search.naver.com/search.naver?where=image&sm=tab_jum&query=%EC%95%84%EC%9D%B4%EC%9C%A0"
 driver.get(url)

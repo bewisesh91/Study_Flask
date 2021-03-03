@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 from selenium import webdriver
 from time import sleep
 
-driver = webdriver.Chrome('./chromedriver')  # 드라이버를 실행합니다.
+driver = webdriver.Chrome('../chromedriver')  # 드라이버를 실행합니다.
 
 
 url = "https://www.melon.com/chart/day/index.htm"
