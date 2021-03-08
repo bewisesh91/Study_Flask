@@ -13,9 +13,26 @@ def main():
     return render_template("index.html")
 
 
-@app.route('/map')
-def test_map():
-    return render_template('prac_map.html')
+@app.route('/matjip', methods=["GET"])
+def get_matjip():
+    # 맛집 목록을 반환하는 API
+    matjip_list = list(db.matjips.find({}, {'_id': False}))
+    # matjip_list 라는 키 값에 맛집 목록을 담아 클라이언트에게 반환합니다.
+    return jsonify({'result': 'success', 'matjip_list': matjip_list})
+
+
+@app.route('/like_matjip', methods=["POST"])
+def like_matjip():
+    title_receive = request.form['title_give']
+    address_receive = request.form['address_give']
+    action_receive = request.form['action_give']
+    print(title_receive, address_receive, action_receive)
+
+    if action_receive == 'like':
+        db.matjips.update_one({'title':title_receive, 'address':address_receive}, {'$set': {'liked':True}})
+    else:
+        db.matjips.update_one({'title': title_receive, 'address': address_receive}, {'$unset': {'liked': False}})
+    return jsonify({'result': 'success'})
 
 
 if __name__ == '__main__':
