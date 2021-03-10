@@ -107,8 +107,8 @@ function sendLink() { // 카카오톡 공유하기
         objectType: 'text',
         text: '시간 관점 테스트',
         link: {
-            mobileWebUrl: 'https://http://kakaotimetest.com',
-            webUrl: 'https://http://kakaotimetest.com',
+            mobileWebUrl: 'http://kakaotimetest.com',
+            webUrl: 'http://kakaotimetest.com',
         },
     })
 }
